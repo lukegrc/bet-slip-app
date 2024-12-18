@@ -1,70 +1,175 @@
-# Getting Started with Create React App
+# Betting App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A modern, responsive betting application built with React and TypeScript, featuring a beautiful UI and comprehensive betting functionality.
 
-## Available Scripts
+## Features
 
-In the project directory, you can run:
+- **Modern UI/UX**: Beautiful, responsive design with smooth animations and transitions
+- **TypeScript**: Full TypeScript support with proper type definitions
+- **Responsive Design**: Mobile-first approach that works on all devices
+- **Real-time Calculations**: Instant calculation of potential gains and totals
+- **Interactive Betting**: Easy selection of choices with visual feedback
+- **Form Validation**: Smart form validation and error handling
+- **Loading States**: Smooth loading animations during bet submission
+- **Statistics Dashboard**: Overview of total bets, amounts, and potential gains
 
-### `npm start`
+## Getting Started
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### Prerequisites
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- Node.js (version 14 or higher)
+- npm or yarn
 
-### `npm test`
+### Installation
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+1. Clone the repository:
 
-### `npm run build`
+```bash
+git clone <repository-url>
+cd gig-senior-test
+```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+2. Install dependencies:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+```bash
+npm install
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+3. Start the development server:
 
-### `npm run eject`
+```bash
+npm start
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+4. Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### Available Scripts
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+- `npm start` - Start development server
+- `npm test` - Run tests in watch mode
+- `npm test -- --watchAll=false` - Run tests once
+- `npm run build` - Build for production
+- `npm run eject` - Eject from Create React App (not recommended)
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## Architecture
 
-## Learn More
+### Tech Stack
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- **React 19** - Modern React with hooks and functional components
+- **TypeScript** - Type-safe development with interfaces and types
+- **CSS3** - Modern CSS with custom properties and responsive design
+- **Jest & Testing Library** - Comprehensive testing suite
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### Project Structure
 
-### Code Splitting
+```
+src/
+├── components/          # React components
+│   ├── BettingCard.tsx # Main betting card component
+│   └── BettingCard.css # Component styles
+├── types/              # TypeScript type definitions
+│   └── index.ts        # Main type interfaces
+├── data/               # Static data
+│   └── events.json     # Sample betting events
+├── App.tsx             # Main application component
+├── App.css             # Application styles
+└── index.tsx           # Application entry point
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+### Type Definitions
 
-### Analyzing the Bundle Size
+The app uses comprehensive TypeScript interfaces for type safety:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+- `Event` - Represents a betting event with sport, category, and competition
+- `Choice` - Represents a betting choice with odds and actor
+- `BettingCardProps` - Props interface for the BettingCard component
 
-### Making a Progressive Web App
+## Design Features
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+### Modern UI Elements
 
-### Advanced Configuration
+- **Glassmorphism**: Semi-transparent cards with backdrop blur effects
+- **Gradient Backgrounds**: Beautiful color gradients throughout the interface
+- **Smooth Animations**: Hover effects, transitions, and micro-interactions
+- **Responsive Grid**: Adaptive layout that works on all screen sizes
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+### Color Scheme
 
-### Deployment
+- Primary: Blue to purple gradients (#667eea → #764ba2)
+- Success: Green tones (#059669 → #10b981)
+- Danger: Red tones (#c53030)
+- Neutral: Gray scale (#2d3748, #718096, #a0aec0)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+## Testing
 
-### `npm run build` fails to minify
+The application includes comprehensive tests covering:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- Component rendering
+- User interactions
+- State management
+- Async operations
+- Form validation
+
+Run tests with:
+
+```bash
+npm test
+```
+
+## Responsive Design
+
+The app is designed to work seamlessly across all devices:
+
+- **Desktop**: Full-featured interface with grid layout
+- **Tablet**: Optimized for touch interactions
+- **Mobile**: Stacked layout with touch-friendly buttons
+
+## Customization
+
+### Styling
+
+The app uses CSS custom properties (variables) for easy theming:
+
+```css
+:root {
+  --primary-color: #667eea;
+  --primary-dark: #764ba2;
+  --success-color: #059669;
+  /* ... more variables */
+}
+```
+
+### Adding New Features
+
+1. Define TypeScript interfaces in `src/types/index.ts`
+2. Create new components in `src/components/`
+3. Add styles in corresponding CSS files
+4. Update tests to cover new functionality
+
+## Deployment
+
+Build the production version:
+
+```bash
+npm run build
+```
+
+The `build` folder contains the optimized production build ready for deployment.
+
+## Contributing
+
+1. Fork the repository
+2. Create a feature branch
+3. Make your changes
+4. Add tests for new functionality
+5. Submit a pull request
+
+## License
+
+This project is licensed under the MIT License.
+
+## Acknowledgments
+
+- Built with Create React App
+- Icons and design inspiration from modern UI/UX trends
+- Testing patterns from React Testing Library best practices

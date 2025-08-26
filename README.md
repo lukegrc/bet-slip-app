@@ -1,6 +1,6 @@
 # Betting App
 
-A modern, responsive betting application built with React and TypeScript, featuring a beautiful UI and comprehensive betting functionality.
+A modern, responsive betting application built with React and TypeScript.
 
 ## Features
 
